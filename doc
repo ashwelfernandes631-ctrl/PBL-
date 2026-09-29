@@ -1,0 +1,48 @@
+IPC Methods: Pipes, Message Queues, and Signals
+Inter-Process Communication (IPC) allows processes to exchange data and coordinate with each other.
+
+1. Pipes
+A pipe is a communication channel between processes.
+
+Data written by one process can be read by another.
+
+Usually unidirectional.
+
+Commonly used between related processes, such as a parent and child.
+
+Example: ls | grep ".txt"
+
+Types:
+
+Unnamed pipes – generally used between related processes.
+
+Named pipes (FIFO) – can be used by unrelated processes.
+
+2. Message Queues
+A message queue stores messages sent between processes.
+
+Processes can send and receive messages asynchronously.
+
+Messages can often have different types/priorities.
+
+Unlike pipes, communication is message-oriented rather than simply a stream of bytes.
+
+3. Signals
+A signal is a small notification sent to a process to indicate that an event has occurred.
+
+It carries very little information.
+
+Used mainly for process control and synchronization.
+
+Examples:
+
+SIGINT – interrupt (Ctrl+C)
+
+SIGTERM – request termination
+
+SIGKILL – force termination
+
+SIGSTOP – stop a process
+
+In short:
+Pipes → data streams | Message queues → structured messages | Signals → event notifications
